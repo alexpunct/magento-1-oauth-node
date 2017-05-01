@@ -4,6 +4,7 @@
             <h1 class="home_title text-center">{{title}}</h1>
             <p class="lead text-center home_lead-text">Generate an Access Token for making REST API Requests</p>
             <form id="oauthForm" class="form-horizontal" method="post" action="/authenticate">
+                <input type="hidden" id="oauth_callback" name="oauth_callback" value="{{oauthCallback}}">
                 <div class="form-group">
                     <label for="admin_url" class="col-sm-3 control-label">Magento URL</label>
                     <div class="col-sm-9">

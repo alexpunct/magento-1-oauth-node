@@ -9,7 +9,12 @@ var router = express.Router();
 function validate(reqParams) {
 	var required = ['admin_url', 'admin_path', 'client_key', 'client_secret', 'user_type', 'oauth_callback'];
 	required.forEach(function(key){
-		if (!reqParams[key]) {
+		try {
+			if (!reqParams[key]) {
+				return false;
+			}
+		} catch(e) {
+			console.error(e);
 			return false;
 		}
 	});
@@ -31,6 +36,7 @@ function paramsToJson(string) {
 // build authentication request and redirect to the login page
 router.post('/', function(req, res, next) {
 	if (!validate(req.body)) {
+		console.log('Validation Error');
 		res.redirect('/error');
 		return;
 	}
@@ -67,9 +73,9 @@ router.post('/', function(req, res, next) {
 			} else {
 				res.redirect(req.body.admin_url + 'oauth/authorize');
 			}
-			// res.send(jsonResponse);
  		} else {
-			res.redirect('/error');
+			console.error(response.body);
+			next(new Error('Cannot authorize. Check the server console for the response.'));
 		}
 	});
 });
