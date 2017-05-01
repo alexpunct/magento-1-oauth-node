@@ -1,0 +1,23 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  padding: 50px;
+  background-image:
+  linear-gradient(
+      to right,
+      #ffd1f5, #b9e8f0
+  );
+}
+
+a {
+  color: #00B7FF;
+}
+
+.home_title,
+.home_lead-text
+{
+  margin-bottom: 20px;
+}

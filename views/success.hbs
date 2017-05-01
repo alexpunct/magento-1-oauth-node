@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1 class="home_title text-center">{{title}}</h1>
+            <p class="lead text-center home_lead-text">You can now call the REST Api using an oAuth 1.0 client and the details below.</p>
+            <form class="form-horizontal" action="/">
+                <div class="form-group">
+                    <label for="api_url" class="col-sm-3 control-label">API Endpoint</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="api_url" value="{{api_url}}RESOURCE" disabled>
+                        Replace RESOURCE with a valid resource: <a target="_blank" href="http://devdocs.magento.com/guides/m1x/api/rest/Resources/resources.html">View Docs</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="consumer_key" class="col-sm-3 control-label">Consumer Key</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="consumer_key" value="{{consumer_key}}" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="consumer_secret" class="col-sm-3 control-label">Consumer Secret</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="consumer_secret" value="{{consumer_secret}}" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="token" class="col-sm-3 control-label">Token</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="token" value="{{token}}" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="token_secret" class="col-sm-3 control-label">Token Secret</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="token_secret" value="{{token_secret}}" disabled>
+                    </div>
+                </div>
+            </form>
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-9">
+                    <a href="/" title="Back home">< Back Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

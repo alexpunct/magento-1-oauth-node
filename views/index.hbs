@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1 class="home_title text-center">{{title}}</h1>
+            <p class="lead text-center home_lead-text">Generate an Access Token for making REST API Requests</p>
+            <form id="oauthForm" class="form-horizontal" method="post" action="/authenticate">
+                <div class="form-group">
+                    <label for="admin_url" class="col-sm-3 control-label">Magento URL</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="admin_url" value="{{admin_url}}" name="admin_url" placeholder="Enter your Magento Store Admin URL">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="admin_path" class="col-sm-3 control-label">Admin Path</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="admin_path" value="{{admin_path}}" name="admin_path" placeholder="Enter the Admin path">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="client_key" class="col-sm-3 control-label">Client Key</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="client_key" value="{{client_key}}" name="client_key" placeholder="Paste your generated Client Key">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="client_secret" class="col-sm-3 control-label">Client Secret</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="client_secret" value="{{client_secret}}" name="client_secret" placeholder="Paste your generated Client Secret">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">API User Type</label>
+                    <div class="col-sm-9">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="user_type" id="user_type_admin" value="admin" checked>Admin User
+                            </label>
+                        </div>
+                        <!--<div class="radio">-->
+                            <!--<label>-->
+                                <!--<input type="radio" name="user_type" id="user_type_standard" value="standard">Standard Customer-->
+                            <!--</label>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
